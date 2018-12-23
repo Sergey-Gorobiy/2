@@ -1,0 +1,17 @@
+from Ed_mod import Data, Teacher, Pupil
+
+lesson = Data('class', 'object', 'inheritance', 'polymorphism', 'encapsulation')
+MarIvanna = Teacher ()
+Vasya = Pupil ()
+Petya = Pupil ()
+Masha = Pupil ()
+MarIvanna.teach(lesson[2], Vasya, Masha)
+MarIvanna.teach(lesson[0], Vasya, Petya, Masha)
+MarIvanna.teach(lesson[3], Masha)
+print('Vasya knowledge - ', Vasya.knowledge)
+print('Petya knowladge - ', Petya.knowledge)
+print('Masha knowladge - ', Masha.knowledge)
+Petya.take(lesson[2])
+print('Petya knowladge - ', Petya.knowledge)
+Masha.forget()
+print('Masha knowladge - ', Masha.knowledge)
